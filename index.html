@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuresh Raj - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #1e1e1e;
+            --text-color: #f5f5f5;
+            --primary-color: #3a3a6e;
+            --secondary-color: #6e6e9c;
+            --accent-color: #8e44ad;
+            --hover-color: #9b59b6;
+            --card-bg: #2e2e2e;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            padding: 80px 20px;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            transform: skewY(-3deg);
+            margin-bottom: -60px;
+            color: var(--text-color);
+        }
+
+        header > * {
+            transform: skewY(3deg);
+        }
+
+        h1 {
+            font-size: 4em;
+            margin: 0;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+        }
+
+        .tagline {
+            font-size: 1.8em;
+            margin-top: 10px;
+            font-weight: 300;
+        }
+
+        .intro {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+
+        nav {
+            background-color: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            padding: 15px 25px;
+            display: inline-block;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
+        }
+
+        nav ul li a:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-4px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+
+        section {
+            padding: 80px 20px;
+        }
+
+        h2 {
+            font-size: 3em;
+            margin-bottom: 30px;
+            text-align: center;
+            color: var(--secondary-color);
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            transform: translateZ(0);
+        }
+
+        .card:hover {
+            transform: translateY(-15px) translateZ(20px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .skill {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            padding: 15px 25px;
+            border-radius: 25px;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+        }
+
+        .skill:hover {
+            transform: scale(1.15) translateZ(10px);
+            background-color: var(--hover-color);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+        }
+
+        .education {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .education-item {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 30px;
+            width: 80%;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        #contact {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+            padding: 120px 20px 80px;
+            margin-top: -60px;
+        }
+
+        .contact-info {
+            text-align: center;
+            font-size: 1.3em;
+        }
+
+        .contact-info i {
+            font-size: 1.6em;
+            margin-right: 15px;
+            color: var(--accent-color);
+        }
+
+        footer {
+            background-color: var(--card-bg);
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .social-links a {
+            color: var(--text-color);
+            font-size: 1.6em;
+            margin: 0 15px;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+            transform: translateY(-4px);
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            header {
+                padding: 60px 20px;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            .tagline {
+                font-size: 1.2em;
+            }
+
+            section {
+                padding: 60px 10px;
+            }
+
+            h2 {
+                font-size: 2.5em;
+            }
+
+            .card, .education-item {
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kuresh Raj</h1>
+        <p class="tagline">Web Developer & Graphic Designer</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <div class="card">
+            <h2>About Me</h2>
+            <p class="intro">Hello! I'm Kuresh Raj, a passionate web developer and graphic designer based in India. Currently, I’m pursuing a B.Tech in Computer Science and Communication Engineering at Manipal University Jaipur. My journey into technology has been driven by a desire to create and innovate, from coding simple websites to designing user-friendly interfaces and exploring complex, interactive web applications. I’m constantly experimenting with new tools and techniques in web development, from front-end frameworks to back-end integration, aiming to deliver seamless, responsive, and visually engaging user experiences. With a commitment to continuous learning, I’m excited to bring creative ideas to life and contribute meaningfully to the tech community.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Graphic Design</div>
+            <div class="skill">UI/UX</div>
+            <div class="skill">Python</div>
+            <div class="skill">Java</div>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="education">
+            <div class="education-item">
+                <h3>Manipal University Jaipur</h3>
+                <p>B.Tech in Computer and Communication Engineering</p>
+                <p>2024 - Present</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-info">
+            <h2>Contact Me</h2>
+            <p><i class="fas fa-envelope"></i> kraj387491@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +91-8797018976</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/kuresh-raj-a70095331/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>&copy; 2024 Kuresh Raj. All rights reserved.</p>
+    </footer>
+</body>
+</html>
